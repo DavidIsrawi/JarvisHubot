@@ -1,5 +1,3 @@
-# Source: https://github.com/github/hubot-scripts/blob/master/src/scripts/advice.coffee
-
 # Description:
 #   Get free advice from http://adviceslip.com/
 #
@@ -18,6 +16,9 @@
 # Author:
 #   pengwynn
 #
+
+# Source: https://github.com/github/hubot-scripts/blob/master/src/scripts/advice.coffee
+
 getAdvice = (msg, query) ->
   msg.http("http://api.adviceslip.com/advice/search/#{query}")
     .get() (err, res, body) ->
