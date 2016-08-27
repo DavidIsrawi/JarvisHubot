@@ -8,5 +8,6 @@
   "hubot-maps",
   "hubot-redis-brain",
   "hubot-rules",
-  "hubot-shipit"
+  "hubot-shipit",
+  "HUBOT_GOOGLE_IMAGES_HEAR"
 ]
