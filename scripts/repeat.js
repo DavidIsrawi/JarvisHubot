@@ -12,7 +12,7 @@ module.exports = function(robot) {
         var sentence = msg.match[2];
 
         for(x in robot) {
-            robot.send(x);
+            console.log(x + " : " + robot[x]);
         }
 
         // var channelID = channels.find(function(x){x.name == channel});
