@@ -20,7 +20,12 @@ module.exports = function(robot) {
             "test" : "D25H5A4F3"
         }
 
-        robot.messageRoom(channels[channel], sentence);
+        if(msg.envelope.user.is_admin) {
+            robot.messageRoom(channels[channel], sentence);
+        }
+        else {
+            robot.send("Sorry bro, only an admin can send this command");
+        }
     });
 
     robot.respond(/say (.*)/i, function (msg){
