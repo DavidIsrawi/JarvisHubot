@@ -24,7 +24,7 @@ module.exports = function(robot) {
             robot.messageRoom(channels[channel], sentence);
         }
         else {
-            robot.send("Sorry bro, only an admin can send this command");
+            msg.send("Sorry bro, only an admin can send this command");
         }
     });
 
