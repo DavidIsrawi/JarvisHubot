@@ -1,8 +1,9 @@
 // Description:
 // Repeats what I say
 
-// Command:
-// Jarvis say
+// Commands:
+// Jarvis say (msg)
+// Jarvis in (channel) say (msg)
 
 module.exports = function(robot) {
 
@@ -11,9 +12,9 @@ module.exports = function(robot) {
         var channel = msg.match[1];
         var sentence = msg.match[2];
 
-        for(x in msg.envelope.user) {
-            console.log(x + " : " + msg.envelope.user[x]);
-        }
+        // for(x in msg.envelope.user) {
+        //     console.log(x + " : " + msg.envelope.user[x]);
+        // }
 
         var channels= {
             "general" : "C237RSC00",
