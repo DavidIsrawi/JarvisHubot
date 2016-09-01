@@ -11,24 +11,21 @@ module.exports = function(robot) {
         var channel = msg.match[1];
         var sentence = msg.match[2];
 
-        // for(x in msg.envelope) {
-        //     console.log(x + " : " + msg.envelope[x]);
-        // }
-
-        var channels= {
-            "general" : "C237RSC00"
+        for(x in msg.envelope.user) {
+            console.log(x + " : " + msg.envelope.user[x]);
         }
 
-        robot.messageRoom("C237RSC00", sentence);
+        var channels= {
+            "general" : "C237RSC00",
+            "test" : "D25H5A4F3"
+        }
+
+        robot.messageRoom(channels[channel], sentence);
     });
 
     robot.respond(/say (.*)/i, function (msg){
 
         var sentence = msg.match[1];
-
-        // for(x in msg.envelope) {
-        //     console.log(x + " : " + msg.envelope[x]);
-        // }
 
         msg.send(sentence);
 
