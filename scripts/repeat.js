@@ -11,14 +11,15 @@ module.exports = function(robot) {
         var channel = msg.match[1];
         var sentence = msg.match[2];
 
-        for(x in msg.envelope) {
-            console.log(x + " : " + msg.envelope[x]);
+        // for(x in msg.envelope) {
+        //     console.log(x + " : " + msg.envelope[x]);
+        // }
+
+        var channels= {
+            "general" : "C237RSC00"
         }
 
-        // var channelID = channels.find(function(x){x.name == channel});
-
-
-        // robot.send(channels.find(channel).id, sentence);
+        robot.send(channels[channel], sentence);
     });
 
     robot.respond(/say (.*)/i, function (msg){
