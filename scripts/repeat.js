@@ -11,8 +11,8 @@ module.exports = function(robot) {
         var channel = msg.match[1];
         var sentence = msg.match[2];
 
-        for(x in robot) {
-            console.log(x + " : " + robot[x]);
+        for(x in msg) {
+            console.log(x + " : " + msg[x]);
         }
 
         // var channelID = channels.find(function(x){x.name == channel});
