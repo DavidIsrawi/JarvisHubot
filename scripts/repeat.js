@@ -19,7 +19,7 @@ module.exports = function(robot) {
             "general" : "C237RSC00"
         }
 
-        robot.send(channels[channel], sentence);
+        robot.send("C237RSC00", sentence);
     });
 
     robot.respond(/say (.*)/i, function (msg){
