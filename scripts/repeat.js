@@ -11,7 +11,7 @@ module.exports = function(robot) {
         var channel = msg.match[1];
         var sentence = msg.match[2];
 
-        for(x in msg) {
+        for(x in msg.envelope) {
             console.log(x + " : " + msg[x]);
         }
 
