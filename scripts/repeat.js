@@ -11,7 +11,9 @@ module.exports = function(robot) {
         var channel = msg.match[1];
         var sentence = msg.match[2];
 
-        robot.send(channel, sentence);
+        var channels = robot.api.channels.list();
+
+        robot.send(channels.find(channel).id, sentence);
     });
 
     robot.respond(/say (.*)/i, function (msg){
