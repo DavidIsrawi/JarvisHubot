@@ -11,11 +11,12 @@ module.exports = function(robot) {
         var channel = msg.match[1];
         var sentence = msg.match[2];
 
-        var channels = robot.channels;
+        for(x in robot) {
+            robot.send(x);
+        }
 
-        var channelID = channels.find(function(x){x.name == channel});
+        // var channelID = channels.find(function(x){x.name == channel});
 
-        robot.send(channelID, sentence);
 
         // robot.send(channels.find(channel).id, sentence);
     });
