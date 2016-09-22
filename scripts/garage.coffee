@@ -9,9 +9,6 @@
 # Author:
 #   Andrew Hopper (@hoppermeister)
 
-
-
-
 module.exports = (robot) ->
 	request = require('request')
 	cheerio = require('cheerio')
@@ -44,7 +41,7 @@ module.exports = (robot) ->
 				thisGarage = {};
 				html = $(obj).html().replace(RegExp(' ', 'g'), '').split '\n'
 				for line in html
-					if line.startsWith("percent:")
+					if line.indexOf("percent:")
 						percent = parseInt(line.replace("percent:", ''))
 						thisGarage.perc = percent
 				thisGarage.garage = ($(obj).find('.dxgv').html())
