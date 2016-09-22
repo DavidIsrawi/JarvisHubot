@@ -41,7 +41,7 @@ module.exports = (robot) ->
 				thisGarage = {};
 				html = $(obj).html().replace(RegExp(' ', 'g'), '').split '\n'
 				for line in html
-					if line.indexOf("percent:")
+					if line.startsWith("percent:")
 						percent = parseInt(line.replace("percent:", ''))
 						thisGarage.perc = percent
 				thisGarage.garage = ($(obj).find('.dxgv').html())
