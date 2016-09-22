@@ -18,8 +18,8 @@
     "hubot-scripts": "^2.17.2",
     "hubot-shipit": "^0.2.0",
     "hubot-slack": "^4.0.2",
-    "cheerio": "0.22.0",
-    "request": "2.74.0"
+    "request": "~2.53.0",
+    "cheerio": "0.7.0"
   },
   "engines": {
     "node": "0.10.x"
