@@ -16,5 +16,6 @@
 
 
 module.exports = (robot) ->
-    robot.on 'upload', upload ->
+    robot.on 'upload', msg ->
         msg.send "Someone uploaded a picture! Please use this thread for any related comment"
+        msg.send msg.type
