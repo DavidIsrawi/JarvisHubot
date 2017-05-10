@@ -18,4 +18,4 @@
 module.exports = (robot) ->
     robot.on 'upload', (msg) ->
         robot.logger.info msg
-        robot.messageRoom msg.channel, "{#msg.user_profile.first_name} has uploaded a file! Please use this thread for any related comment"
+        robot.messageRoom msg.channel, '#{msg.user_profile.first_name} has uploaded a file! Please use this thread for any related comment'
