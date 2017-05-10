@@ -9,7 +9,7 @@
 #   None
 #
 # Commands:
-#   x uploaded this image: ...
+#   Upload a file
 #
 # Author:
 #   David Israwi
@@ -19,4 +19,4 @@ module.exports = (robot) ->
     robot.on 'upload', (msg) ->
         robot.logger.info msg
         name = msg.user_profile.first_name
-        robot.messageRoom msg.channel, '#{ name } has uploaded a file! Please use this thread for any related comment'
+        robot.messageRoom msg.channel, (name + ' has uploaded a file! Please use this thread for any related comment') 
