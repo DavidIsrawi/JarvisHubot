@@ -19,5 +19,4 @@ module.exports = (robot) ->
     robot.on 'upload', (msg) ->
         robot.logger.info "PICTURE ARRIVED"
         robot.logger.info msg
-        robot.send "Someone uploaded a picture! Please use this thread for any related comment"
-        robot.send msg.real_name
+        robot.messageRoom msg.channel, "Someone uploaded a picture! Please use this thread for any related comment"

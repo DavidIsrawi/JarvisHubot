@@ -34,6 +34,4 @@ ackbars = [
 
 module.exports = (robot) ->
   robot.hear /it['’]?s a trap\b/i, (msg) ->
-    robot.logger.info 'PARAMETER RECEIVED:'
-    robot.logger.info msg
     msg.send msg.random ackbars
