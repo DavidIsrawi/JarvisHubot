@@ -1,5 +1,6 @@
 # Description:
 #   Starts thread whenever a user uploads an image
+#   Waits for signal from slack adapter
 #
 # Dependencies:
 #   None
@@ -15,6 +16,5 @@
 
 
 module.exports = (robot) ->
-    robot.hear /(.*)/i, (msg) ->
-        msg.send msg.match[1]
-        #msg.send "Someone uploaded a picture! Use this thread for any related comment"
+    robot.on 'upload', upload ->
+        msg.send "Someone uploaded a picture! Please use this thread for any related comment"
