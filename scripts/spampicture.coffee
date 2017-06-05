@@ -18,5 +18,11 @@
 module.exports = (robot) ->
     robot.on 'upload', (msg) ->
         # robot.logger.info msg
-        name = msg.user_profile.first_name
+
+        name = 'A brother'
+        try
+            name = msg.user_profile.first_name
+        catch(error)
+            print 'Error, user undefined'
+            
         robot.messageRoom msg.channel, (name + ' has uploaded a file! Please use this thread for any related comment')
