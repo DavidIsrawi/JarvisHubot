@@ -11,7 +11,7 @@ module.exports = (robot) ->
     request = require('request')
     cheerio = require('cheerio')
 
-    robot.respond 'pubsub', (msg) ->
+    robot.respond /pubsub/i, (msg) ->
         r = request 'http://weeklyad.publix.com/Publix/BrowseByListing/ByCategory/?StoreID=2500468&CategoryID=5117860', (error, response, body) ->
             $ = cheerio.load(body)
             sales = []
