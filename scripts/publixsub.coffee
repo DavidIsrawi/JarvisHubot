@@ -29,6 +29,5 @@ module.exports = (robot) ->
             if sales.length == 0
                 msg.send('No sales were found :(')
             else
-                msg.send('This week:')
                 for sale in sales
                     msg.send('-------\n' + sale.title + '\nPrice: ' + sale.price + ' (' + sale.priceDif + ')' + '\nSale will go on for the period ' + sale.expiration)
