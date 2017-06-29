@@ -18,9 +18,10 @@ module.exports = (robot) ->
             $('.gridtile').each (i,obj) ->
                 html = $(obj).html()
                 title = $(obj).find('span.title').text()
-                if title.includes('Sub')
+                if title.toLowerCase().includes('sub')
+                    title = title.replace '&#39;', "'"
                     sale = {
-                        title : title
+                        title : title.replace '&#174;', ''
                         price : $(obj).find('.deal').text()
                         priceDif : $(obj).find('.priceQualifier').text()
                         expiration : $(obj).find('.IDP_validDates').text().match(/\d+\/\d+\s\–\s\d+\/\d+/g)
