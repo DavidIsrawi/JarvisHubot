@@ -28,7 +28,7 @@ module.exports = (robot) ->
                     }
                     sales.push sale
             if sales.length == 0
-                msg.send('No sales were found :(')
+                msg.send('No sales were found on the first page :(\nCheck http://weeklyad.publix.com/Publix/BrowseByListing/ByCategory/?StoreID=2500468&CategoryID=5117860 for more info')
             else
                 for sale in sales
                     msg.send('-------\n' + sale.title + '\nPrice: ' + sale.price + ' (' + sale.priceDif + ')' + '\nSale will go on for the period ' + sale.expiration)
