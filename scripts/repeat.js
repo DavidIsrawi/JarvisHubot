@@ -22,10 +22,11 @@ module.exports = function(robot) {
         }
 
         if(msg.envelope.user.is_admin || msg.envelope.user.name == "davidisrawi") {
-            robot.messageRoom(channels[channel], sentence);
+            // robot.messageRoom(channels[channel], sentence);
+            robot.messageRoom('general', sentence);
         }
         else {
-            msg.send("Sorry bro, only an admin can send this command");
+            msg.send("Sorry bro, only an admin or David can send this command");
         }
     });
 
