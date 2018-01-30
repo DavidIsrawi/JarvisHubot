@@ -21,7 +21,7 @@ module.exports = function(robot) {
             "test" : "D25H5A4F3"
         }
 
-        if(msg.envelope.user.is_admin) {
+        if(msg.envelope.user.is_admin || msg.envelop.user.name == "davidisrawi") {
             robot.messageRoom(channels[channel], sentence);
         }
         else {
