@@ -12,7 +12,7 @@
 #   Upload a file
 #
 # Author:
-#   David Israwi
+#   David Israwi (@davidisrawi)
 
 
 module.exports = (robot) ->
