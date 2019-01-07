@@ -2,7 +2,7 @@
 #   UCF Area - Publix Sub of the Week
 #
 # Commands:
-#   jarvis pubsub - Responds with sales from nearby publix stores
+#   pubsub - Responds with sales from nearby publix stores
 #
 # Author:
 #   David Israwi (@davidisrawi)

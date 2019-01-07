@@ -2,8 +2,8 @@
 // Repeats what I say
 
 // Commands:
-// Jarvis say (msg)
-// Jarvis in (channel) say (msg)
+// say (msg)
+// in (channel) say (msg)
 
 module.exports = function(robot) {
 
